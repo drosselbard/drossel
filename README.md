@@ -6,3 +6,5 @@ The code is written in R and uses RStudio to use the package 'rstudioapi'.
 If there are any questions hit me up on discord --> drosselbard
 
 Have fun :)
+
+PS: This will probably never get updated
