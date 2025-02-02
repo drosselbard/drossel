@@ -39,14 +39,13 @@ View(new.game)
 
 # prediction using two columns as a predictor ####
 ## user inputs ####
-new.game.col2.name <- 'peach.kidnapped' # INPUT THE NAME OF THE SECOND DEFINED COLUMN HERE
+new.game.col2.name <- 'peach.kidnapped' # INPUT THE NAME OF THE SECOND DEFINED COLUMN HERE (possible names: peach.kidnapped, princess.kidnapped, general.kidnapping, location.bin, bowser.bad, yoshi)
 new.game.col2 <- c(FALSE) # INPUT THE VALUE OF THE SECOND DEFINED COLUMN HERE
 
 file <- file %>% select(c('year', new.game.col2.name), everything())
 new.game <- as_tibble(matrix(nrow = length(new.game.years), ncol = ncol(file))) %>% `colnames<-`(colnames(file))
 new.game$year <- new.game.years
 new.game[[new.game.col2.name]] <- new.game.col2
-
 
 for (i in 3:ncol(file)) {
   print(colnames(file)[i])
